@@ -1425,18 +1425,6 @@ tr.introjs-showElement>th {
     outline: none
 }
 
-.mapbox-ctrl-right-bottom {
-    bottom: 0;
-    position: absolute;
-    right: 50px
-}
-
-.mapboxgl-ctrl-bottom-left,
-.mapboxgl-ctrl-bottom-right,
-.mapboxgl-ctrl-top-left,
-.mapboxgl-ctrl-top-right {
-    z-index: 0 !important
-}
 
 .mapboxgl-ctrl-mtc {
     border-radius: 0;
@@ -4587,7 +4575,6 @@ body.embed.map #app {
     height: 100%
 }
 
-body.embed #add-note-control,
 body.embed #left-sidebar,
 body.embed #radius-tool-control,
 body.embed #right-sidebar,
