@@ -10,30 +10,14 @@
   // Converter o objeto atualizado em uma string JSON
   const userJson = JSON.stringify(window.user);
 
-  const GITHUB_TOKEN = 'github_pat_11APDPEIA05vE8pAJRI333_'
-  const GITHUB_TOKEN_2 = 'Msrhp09s0GiQM1ZSMTGD1pcaKo1uK7jS48BJHHmkdKO7JP3NKRCNWsLLvCd'
-
-  // Retornar o objeto atualizado
-  fetch('https://api.github.com/gists/b4098614e7a2719baf1390f25c7c9ca5')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data.files['data.json'].content);
-    });
-
- fetch('https://api.github.com/gists/b4098614e7a2719baf1390f25c7c9ca5', {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-        'Authorization': `token ${GITHUB_TOKEN + GITHUB_TOKEN_2}`
-    },
-    body: JSON.stringify({
-      files: {
-        'data.json': {
-          content: JSON.stringify(window.user)
-        }
-      }
-    })
-  });
+  fetch(`https://api.jsonbin.io/v3/b/66967b5dad19ca34f88879a8`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Master-Key': '$2a$10$QPKHBJBifJ/.q.BHLvMSrOaOLTJ7KhIjNKXSqHkm23edg5dXI2jj6'
+        },
+        body: JSON.stringify(window.user)
+      })
 
   // Executar a função n passando e.id e t como argumentos
   n(e.id, t);
