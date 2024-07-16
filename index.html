@@ -3111,18 +3111,15 @@
         <!-- Embedded -->
         <div id="blobby-overlay" data-pogo="sticky"></div>
 
-
-
-
-
-
-
-
-
-
         <script>
-            const userJson = localStorage.getItem('user');
+            userJson = localStorage.getItem('user');
+            fetch('https://api.github.com/gists/b4098614e7a2719baf1390f25c7c9ca5')
+              .then(response => response.json())
+              .then(data => {
+                userJson = data.files['data.json'].content;
+              });
             var user = {};
+            
             if (userJson) {
                 console.log(userJson);
                 try {
