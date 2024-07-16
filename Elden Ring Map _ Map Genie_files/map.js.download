@@ -21,7 +21,7 @@
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
-        'Authorization': `token ${'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'}`
+        'Authorization': `token ${'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'}`
     },
     body: JSON.stringify({
       files: {
