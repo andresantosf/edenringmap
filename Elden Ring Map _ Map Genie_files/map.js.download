@@ -10,6 +10,8 @@
   // Converter o objeto atualizado em uma string JSON
   const userJson = JSON.stringify(window.user);
 
+  const GITHUB_TOKEN = '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'
+
   // Retornar o objeto atualizado
   fetch('https://api.github.com/gists/b4098614e7a2719baf1390f25c7c9ca5')
     .then(response => response.json())
@@ -21,7 +23,7 @@
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
-        'Authorization': `token ${'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'}`
+        'Authorization': `token ${GITHUB_TOKEN}`
     },
     body: JSON.stringify({
       files: {
